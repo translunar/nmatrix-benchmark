@@ -18,11 +18,13 @@ int main() {
   double alpha = 1.0;
   double beta = 0.0;
 
-  cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, m, n, k, alpha, &(a[0]), k, &(b[0]), n, beta, &(c[0]), n);
+  for (int i = 0; i < 5000000; ++i)
+    cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, m, n, k, alpha, &(a[0]), k, &(b[0]), n, beta, &(c[0]), n);
 
-  for (int i = 0; i < 9; i++) {
-    std::printf("%f ", c[i]);
-  }
-  std::printf("\n");
+  return 0;
+  //for (int i = 0; i < 9; i++) {
+  //  std::printf("%f ", c[i]);
+  //}
+  //std::printf("\n");
 }
 

@@ -1,4 +1,4 @@
-CXX=g++-4.7
+CXX=g++
 LIBS=-llapack -lcblas -latlas
 OPTS=-O3
 
